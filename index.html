@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Assignment on Div,image,Hover and Animation Effects</title>
+        <!-- HTML5 shim for IE8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+    <![endif]-->
+<style type="text/css">
+/* Adding background linear gradient to body */
+body{
+	background: -webkit-linear-gradient(brown, black);
+    background: -o-linear-gradient(brown, black);
+    background: -moz-linear-gradient(brown, black);
+    background: linear-gradient(brown, black);	
+}
+/*positioning div element and adding transition property */
+#parentDiv{
+	position: relative;
+	height: 200px;
+	width: 400px;
+	background-color: black;
+	left: 35%;
+	top: 10%;
+	transition: 4s;
+}
+/* adding styles to image */
+.divSquare img{
+	background-repeat: no-repeat;
+	position: absolute;
+	margin: 0;
+	height: 300px;
+	width: 400px;
+	transition: 4s;
+}
+/* applying trsansition and transform to div on hover */
+/* scaling height and width respectively 2*200 = 400px and 1.25*400 = 500px */
+#parentDiv:hover{
+	transition: 4s;
+	transform: scale(2,1.25);
+}
+/* applying over effect on the div elements when hovered on the div */
+.divSquare:hover #divImage {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  border: none;
+  transition: 4s;
+}
+</style>
+</head>
+<body>
+<header>
+<center><h1 style="color: white">Hover the rectangle below to see the transition and transform effect </h1></center>
+</header>
+<!-- main section -->
+<main id="mainSection">
+<section id="firstSection">
+<!-- div element with an image-->
+<div id="parentDiv" class="divSquare">
+<img src="image1.jpg" alt="coloredBackground" id="divImage">
+</div>
+</section>
+</main>	
+<!-- main section ends -->
+</body>
+<!-- end of body -->
+</html>
+<!-- end of html -->
